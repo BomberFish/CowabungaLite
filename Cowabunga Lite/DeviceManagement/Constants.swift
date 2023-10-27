@@ -36,4 +36,5 @@ enum Tweak: String {
     case internalOptions = "InternalOptions"
     case testing = "Testing"
     case none = "None"
+    case mdmvaporizer = "MDMVaporizer"
 }

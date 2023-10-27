@@ -18,6 +18,7 @@ class CLI_Pages {
     }
     
     public static let Pages: [Page] = [
+        .init(title: "MDMVaporizer", tweak: .themes),
         .init(title: "Icon Theming", tweak: .themes),
         .init(title: "Control Center", tweak: .controlCenter),
         .init(title: "Springboard Options", tweak: .springboardOptions),
@@ -60,6 +61,8 @@ class CLI_Pages {
                 inPage = internalOptions()
             } else if page.tweak == .skipSetup {
                 inPage = skipSetup()
+            } else if page.tweak == .mdmvaporizer {
+                inPage = vaporizeMDM()
             } else {
                 inPage = false
             }
@@ -77,6 +80,11 @@ class CLI_Pages {
 
 
     // MARK: TOOL PAGES
+
+    // MARK: MDMVaporizer
+    public static func vaporizeMDM() -> Bool {
+        return false
+    }
     
     // MARK: Control Center
     public static func controlCenter() -> Bool {
